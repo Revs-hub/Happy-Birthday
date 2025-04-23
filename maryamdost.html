@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam - Best Friend</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .background span {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+            animation-delay: calc(-1s * var(--i));
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .container {
+            max-width: 700px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff9ff3;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 15px 0;
+            color: #f1f1f1;
+        }
+
+        .highlight {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <span style="--i:1; top:10%; left:20%;"></span>
+        <span style="--i:2; top:30%; left:50%;"></span>
+        <span style="--i:3; top:50%; left:70%;"></span>
+        <span style="--i:4; top:80%; left:40%;"></span>
+        <span style="--i:5; top:20%; left:80%;"></span>
+    </div>
+    <div class="container">
+        <h1>Maryam, Bandar hai tu🐵</h1>
+        <p>Tujhe pata hai, mere liye dosti ka matlab sirf tu hai. Chahe tu kabhi reply kare ya ignore kare, mere dil me tere liye wahi jagah hai jo shuru se thi. Mujhe tujhse kabhi koi shikayat nahi hui, na kabhi hogi.</p>
+        <p>Ho sakta hai kabhi-kabhi tu mujhe dost na samjhe, par meri taraf se tu hamesha meri sabse acchi dost rahegi. Chahe tu kitna bhi busy ho, mujhe ignore kare, ya reply na kare, par mere liye tu special hai.</p>
+        <p>Tere ek message pe mai hamesha hazir ho jaata hu, kyunki mere liye dost ka matlab sirf tu hai. Mera bas itna kehna hai ki tu chahe mujhe samjhe ya na samjhe, meri taraf se meri dosti kabhi kam nahi hogi. Tu meri best friend hai, aur hamesha rahegi.</p>
+        <p>Tujhe pata nahi, par mere liye tu bahut important hai.</p>
+        <p>Shayad ye sab padhne ke baad tu samjhe ki pagal kuch bhi bolte rehta hai aur teko koi fark hi na padhe</p>
+        <p>Chalo koi na bina dimaag ke kitna hi samajh aata hoga teko</p>
+    </div>
+</body>
+</html>
