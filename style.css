@@ -1,0 +1,174 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Font */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('assets/arman.jpg');
+  background-color: #111;
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Smooth Scroll for Full Page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeInNav 1s ease forwards;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f39c12; /* Highlight color */
+  transform: translateY(-5px);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f39c12;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Fade-in effect for sections */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Sections */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  margin-bottom: 50px;
+}
+
+/* Parallax Effect for Home Section */
+.home {
+  background-color: #00000000;
+  background-image: url('https://yourimageurl.com'); /* Add your image here */
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.gallery {
+  background-color: #44444400;
+}
+
+.about {
+  background-color: #55555500;
+}
+
+.contact {
+  background-color: #66666600;
+  
+
+}
+
+/* Gallery Grid with Hover Effects */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Contact Section with smooth transition */
+.contact {
+  animation: fadeIn 1.5s ease-out 0.5s forwards;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+  color: #aaa;
+}
+
+/* Fade-in effect for navigation */
+@keyframes fadeInNav {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Giggle Animation */
+@keyframes giggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Apply to All Headers */
+h1, h2, h3, h4, h5, h6 {
+  display: inline-block; /* Necessary for the effect */
+  cursor: pointer; /* Show a pointer on hover */
+  transition: transform 0.2s ease; /* Smooth transition back to default state */
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+  animation: giggle 1s ease-in-out;
+}
